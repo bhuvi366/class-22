@@ -12,15 +12,21 @@ function setup() {
  //the game world is euqal to engine's world
  world=engine.world;
  //create game object soul
- object=Bodies.rectangle(200,200,10,10);
+ ground=new Ground(400,380,800,10)
+ var options={isStatic:false,restitution:1};
+ object1=Bodies.circle(100,200,10,options);
 //add game object to the world
-World.add(world,object)
+box=new Box(200,200,10,10)
+World.add(world,object1)
 }
 
 function draw() {
-  background(255,255,255);
+  background(0);
   Engine.update(engine);  
   //create body for object soul
-  rect(this.object.position.x,this.object.position.y,10,10);
+  ground.display();
+  box.display();
+  ellipseMode(RADIUS)
+  ellipse(this.object1.position.x,this.object1.position.y,10);
  
 }
