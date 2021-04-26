@@ -10,7 +10,10 @@ this.height=height;
 World.add(world,this.body)
 }
 display(){
- // it tells the comuter how to use the property    
+ // it tells the comuter how to use the property  
+ strokeWeight(4);
+     stroke(255)
+     fill ("brown")  
  rectMode(CENTER)
   rect(this.body.position.x,this.body.position.y,this.width,this.height);
 }

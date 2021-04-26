@@ -1,5 +1,5 @@
-class Box{
-    constructor(x,y,width,height){
+class Log{
+    constructor(x,y,height){
     // define properties of an object
     var options={
         isStatic:false,
@@ -7,8 +7,8 @@ class Box{
         friction:0.5,
         density:1
     }
-    this.body=Bodies.rectangle(x,y,width,height,options);
-    this.width=width;
+    this.body=Bodies.rectangle(x,y,20,height,options);
+    this.width=20;
     this.height=height;
     World.add(world,this.body)
     }
